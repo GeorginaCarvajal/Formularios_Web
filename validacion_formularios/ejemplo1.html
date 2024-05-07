@@ -7,22 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="" id="" name="" onsubmit="return validacion()"> 
-    </form> 
     <script> 
-    function validacion()  
-    {
-    if (condición 1er campo) { 
-    } 
-    // Si no cumple la condición 
-    alert('[ERROR] El campo es incorrecto por...'); return false; 
-    if (condición 2do campo) { 
-    } 
-    // Si no cumple la condición 
-    alert('[ERROR] El campo es incorrecto por... '); return false; 
-    // Llega a este punto cuando no se ha producido ningún error
-    return true; 
-    }
-    </script> 
+        function valida(){ 
+        valor = document.getElementById("campo").value; 
+        if (valor == null || valor.length == 0 || valor.trim() == "") { 
+        alert("El campo no puede estar vacio "); 
+        return false; 
+        } 
+        return true 
+        } 
+        </script> 
+        <form action="" method="" id="" name="" onsubmit="return valida()"> 
+        <input type="text" id="campo"/> 
+        <input type="submit" value="Submit" /> </form> 
+        
 </body>
 </html>

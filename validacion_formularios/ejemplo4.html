@@ -7,12 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    selected_index = 
-    document.getElementById("opciones").selectedIndex; 
-    if (selected_index == null || selected_index == 0) { return false; 
-    } 
-    <select id="opciones" name="opciones"> 
-    <option value="">- Seleccione una opción -</option> 
-    <option value="1">Opción 1</option> <option value="2">Opción 2</option> <option value="3">Opción 3</option> </select>
+    <Script>
+    function validarFecha(fecha) { 
+    const partes = fecha.split('-'); 
+    const year = parseInt(partes[0], 10); 
+    const monthIndex = parseInt(partes[1], 10) - 1; const day = parseInt(partes[2], 10); 
+    const fechaConstruida = new Date(year, monthIndex, day); return fechaConstruida.getFullYear() === year 
+    && fechaConstruida.getMonth() === monthIndex && fechaConstruida.getDate() === day; 
+    // Ejemplo de uso 
+    var fechaValida = validarFecha ("2023-05-06"); console.log(fechaValida); // true 
+    var fechaInvalida = validarFecha ("2021-02-29"); console.log(fechaInvalida); // false 
+    }
+    </Script>
+   
 </body>
 </html>

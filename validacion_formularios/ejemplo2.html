@@ -7,19 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <script> 
-        function valida(){ 
-        valor = document.getElementById("campo").value; 
-        if (valor == null || valor.length == 0 || valor.trim() == "") { 
-        alert("El campo no puede estar vacio "); 
-        return false; 
-        } 
-        return true 
-        } 
-        </script> 
-        <form action="" method="" id="" name="" onsubmit="return valida()"> 
-        <input type="text" id="campo"/> 
-        <input type="submit" value="Submit" /> </form> 
-        
+    <script>
+    isNaN(3); // false 
+    isNaN("3"); // false 
+    isNaN(3.3545); // false 
+    isNaN(32323.345); // false 
+    isNaN(+23.2); // false 
+    isNaN("-23.2"); // false 
+    isNaN("23a"); // true 
+    isNaN("23.43.54"); // true 
+    </script>
 </body>
 </html>
